@@ -1,0 +1,126 @@
+/* UserStyle.css */
+
+/* Estilo para el encabezado */
+header {
+    background-color: #1a202c; /* Color de fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .nav-links a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .nav-links a:hover {
+    color: #4fd1c5; /* Cambia el color en hover */
+}
+
+header .welcome {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el resumen de inventario */
+.inventory-summary {
+    background-color: #edf2f7; /* Color de fondo claro */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-summary h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.inventory-summary .stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.inventory-summary .stat strong {
+    font-weight: bold;
+}
+
+/* Estilo para actividades recientes */
+.recent-activities {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activities h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.recent-activities ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para acciones rápidas */
+.quick-actions {
+    background-color: #e2e8f0; /* Fondo gris claro */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quick-actions h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.quick-actions .action-buttons a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #4299e1; /* Azul Tailwind */
+    color: white;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.quick-actions .action-buttons a:hover {
+    background-color: #2b6cb0; /* Azul más oscuro en hover */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #1a202c; /* Color de fondo oscuro */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

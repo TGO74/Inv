@@ -1,0 +1,102 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    background: #ffffff;
+    padding: 50px 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 3;
+    border-radius: 0; /* Quitar el redondeo del header */
+}
+
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333; /* Cambiar el color del texto del header */
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem; /* Tamaño del encabezado ajustado */
+}
+
+footer {
+    border-radius: 20px;
+    background-color: #333; /* Cambiar color de fondo del footer */
+}
+
+.form-control, .btn {
+    border-radius: 50px;
+}
+
+.logo {
+    display: block;
+    margin-top: 20px;
+    width: 160px; /* Aumentar el ancho de la imagen al doble */
+    height: 160px; /* Aumentar la altura de la imagen al doble */
+    border-radius: 50%; /* Mantener la imagen redonda */
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.login-section {
+    background-color: #3182ce; /* Color de fondo azul para la sección de logueo y texto */
+    color: white; /* Color de texto para la sección de logueo y texto */
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section.relative {
+    position: relative;
+}
+
+section.relative .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section.bg-white {
+    background-color: white;
+}
+
+h2 {
+    color: #333;
+}
+
+ul.list-disc {
+    padding-left: 1.5rem;
+}
+
+ul.list-disc li {
+    margin-bottom: 0.5rem;
+}
