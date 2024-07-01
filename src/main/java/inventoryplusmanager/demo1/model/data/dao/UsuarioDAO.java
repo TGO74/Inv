@@ -66,4 +66,48 @@ public class UsuarioDAO {
         }
         return datosResultado;
     }
+
+    public static void actualizarUsuario(DSLContext query, Usuario usuario) {
+
+        query.update(DSL.table("Usuario"))
+                .set(DSL.field("nombreUsuario"), usuario.getNombreUsuario())
+                .set(DSL.field("email"), usuario.getEmail())
+                .set(DSL.field("password"), usuario.getPassword())
+                .where(DSL.field("idUsuario").eq(usuario.getIdUsuario()))
+                .execute();
+    }
+
+    public static void eliminarUsuario(DSLContext query, Usuario usuario) {
+
+        query.delete(DSL.table("Usuario"))
+                .where(DSL.field("idUsuario").eq(usuario.getIdUsuario()))
+                .execute();
+
+    }
+
+    public static String[][] obtenerUsuarioPorId(DSLContext query, int id) {
+        Result<Record> resultados = query.select()
+                .from(DSL.table("Usuario"))
+                .where(DSL.field("idUsuario").eq(id))
+                .fetch();
+        return exportarDatos(resultados);
+    }
+
+    public static String[][] obtenerUsuarioPorNombre(DSLContext query, String nombre) {
+        Result<Record> resultados = query.select()
+                .from(DSL.table("Usuario"))
+                .where(DSL.field("nombreUsuario").eq(nombre))
+                .fetch();
+        return exportarDatos(resultados);
+    }
+
+    public static String[][] obtenerUsuarioPorEmail(DSLContext query, String email) {
+        Result<Record> resultados = query.select()
+                .from(DSL.table("Usuario"))
+                .where(DSL.field("email").eq(email))
+                .fetch();
+        return exportarDatos(resultados);
+    }
+
+
 }

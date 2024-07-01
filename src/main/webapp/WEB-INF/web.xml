@@ -7,49 +7,22 @@
 
     <!-- Servlets -->
     <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>inventoryplusmanager.demo1.controller.LoginServlet</servlet-class>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <servlet-class>demo1.controller.UsuarioServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RegistroCategoriaServlet</servlet-name>
-        <servlet-class>inventoryplusmanager.demo1.controller.RegistroCategoriaServlet</servlet-class>
+        <servlet-name>ProductoServlet</servlet-name>
+        <servlet-class>demo1.controller.ProductoServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>RegistroProductoServlet</servlet-name>
-        <servlet-class>inventoryplusmanager.demo1.controller.RegistroProductoServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>RegistroUsuarioServlet</servlet-name>
-        <servlet-class>inventoryplusmanager.demo1.controller.RegistroUsuarioServlet</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>InicioUsuarioServlet</servlet-name>
-        <servlet-class>com.example.InicioUsuarioServlet</servlet-class>
-    </servlet>
-
 
     <!-- Servlet Mappings -->
-
     <servlet-mapping>
-        <servlet-name>InicioUsuarioServlet</servlet-name>
-        <url-pattern>/InicioUsuarioServlet</url-pattern>
+        <servlet-name>UsuarioServlet</servlet-name>
+        <url-pattern>/usuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegistroCategoriaServlet</servlet-name>
-        <url-pattern>/registroCategoria</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegistroProductoServlet</servlet-name>
-        <url-pattern>/registroProducto</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegistroUsuarioServlet</servlet-name>
-        <url-pattern>/RegistroUsuario</url-pattern>
+        <servlet-name>ProductoServlet</servlet-name>
+        <url-pattern>/producto</url-pattern>
     </servlet-mapping>
 
     <!-- Welcome File -->
@@ -57,7 +30,7 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-
+    <!-- Filter for encoding -->
     <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
@@ -75,6 +48,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-
-
+    <listener>
+        <listener-class>demo1.config.AppInitializer</listener-class>
+    </listener>
 </web-app>

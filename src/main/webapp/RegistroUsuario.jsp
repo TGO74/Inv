@@ -10,7 +10,7 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
 <div class="bg-white p-8 rounded-lg shadow-md w-96">
     <h1 class="text-2xl font-bold mb-6">Registro de Usuario</h1>
-    <form action="RegistroUsuario" method="post">
+    <form action="/usuario" method="post">
         <div class="mb-4">
             <label for="nombreUsuario" class="block text-gray-700 mb-2">Nombre</label>
             <input type="text" id="nombreUsuario" name="nombreUsuario" class="w-full px-3 py-2 border rounded-lg" required>

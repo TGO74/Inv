@@ -27,10 +27,10 @@ public class DBGenerator {
     }
 
     private static void crearBaseDato(DSLContext create, String nombreBD) {
-        int execute = create.createDatabaseIfNotExists(nombreBD).execute();
+        create.createDatabaseIfNotExists(nombreBD).execute();
     }
 
-    public static DSLContext actualizarConexion(Connection connection, String nombreBD) throws ClassNotFoundException {
+    private static DSLContext actualizarConexion(Connection connection, String nombreBD) throws ClassNotFoundException {
         DBConnector.closeConnection(connection);
         connection = DBConnector.connection(nombreBD, "root", "");
         return DSL.using(connection);
@@ -69,7 +69,7 @@ public class DBGenerator {
     private static void crearTablaUsuario(DSLContext create) {
         create.createTableIfNotExists("Usuario")
                 .column("idUsuario", INTEGER.identity(true))
-                .column("nombreUsuario", VARCHAR(100))
+                .column("nombreUsuario", VARCHAR(50))
                 .column("email", VARCHAR(100))
                 .column("password", VARCHAR(100))
                 .constraint(primaryKey("idUsuario"))

@@ -22,6 +22,17 @@ public class Producto {
         this.categoria = categoria;
     }
 
+    public Producto(String nombreProducto, double precio, int stock, Marca marca, Categoria categoria) {
+
+        this.nombre = nombreProducto;
+        this.precio = precio;
+        this.stock = stock;
+        this.marca = marca;
+        this.categoria = categoria;
+
+
+
+    }
 
 
     // getters y setters
